@@ -49,6 +49,7 @@ function productsCards (products, isDashboard) {
 
 function singleProduct (product, isDashboard) {
     let singleProductHTML = `
+    <main>
     <section class="cardsProducts singleProduct">
         <div class="cardProduct">
             <p>${product.name}</p>
@@ -59,7 +60,8 @@ function singleProduct (product, isDashboard) {
             <p>Size: ${product.size}</p>
             ${isDashboard ? `<a href="/dashboard/${product._id}/edit"><button>Edit</button></a><a href="/dashboard/${product._id}/delete?_method=DELETE"><button>Delete</button></a>`:""}
         </div>
-    <section class="cardsProducts">`
+    </section>
+    </main>`
     return singleProductHTML
 }
 
